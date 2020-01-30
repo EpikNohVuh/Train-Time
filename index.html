@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" class="css">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- add the following scripts to the bottom of your <body> tag, but before you use any Firebase services: -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+    <!-- Realtime Database -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron jumbotron-fluid">
+            <h1 class="display-4 text-center">Anytime is Train Time</h1>
+            <p class="lead font-weight-bold text-center">Choo Choo. Chee Chee.</p>
+            <h2 id="currentTime"></h2>
+        </div>
+
+        <div class="card text-center mt-4">
+            <div class="card-header color-peacock text-light">
+                Current Train Schedule
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td class="col-sm-2 font-weight-bold">Train #</td>
+                        <td class="col-sm-2 font-weight-bold">Destination</td>
+                        <td class="col-sm-2 font-weight-bold">Frequency (min)</td>
+                        <td class="col-sm-2 font-weight-bold">Next Arrival</td>
+                        <td class="col-sm-2 font-weight-bold">Minutes Away</td>
+                    </tr>
+                </thead>
+                <tbody class="tbodyTrain table-hover">
+                    <!-- TRAIN ROUTE GETS APPENDED HERE -->
+                </tbody>
+            </table>
+
+
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header color-peacock text-light">
+                Add Train to Schedule
+            </div>
+            <div class="px-2">
+                <form>
+                    <div class="form-group">
+                        <label for="Train Name">Train Name</label>
+                        <input type="text" class="form-control" id="trainName">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="Destination">Destination</label>
+                            <input type="text" class="form-control" id="Destination">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstTrain">First Train Time (HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="firstTrain">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="frequency">Frequency (min.)</label>
+                            <input type="text" class="form-control" id="Frequency">
+                        </div>
+                        <button type="submit" class="btn color-peacock text-light">Add Train</button>
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "USE YOUR OWN API KEY, THANK YOU",
+            authDomain: "service-storage-9ff7a.firebaseapp.com",
+            databaseURL: "https://service-storage-9ff7a.firebaseio.com",
+            projectId: "service-storage-9ff7a",
+            storageBucket: "service-storage-9ff7a.appspot.com",
+            messagingSenderId: "769919220049",
+            appId: "1:769919220049:web:e68a565de3e4de2d737b70"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+</body>
+
+</html>
