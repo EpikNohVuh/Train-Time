@@ -21,6 +21,11 @@
     <!-- Realtime Database -->
     <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
 
 
 </head>
@@ -63,25 +68,24 @@
             <div class="px-2">
                 <form>
                     <div class="form-group">
-                        <label for="Train Name">Train Name</label>
-                        <input type="text" class="form-control" id="trainName">
+                        <label for="TrainName">Train Name</label>
+                        <input type="text" class="form-control" id="TrainName" maxlength=20 required />
                     </div>
                     <div class="form-group">
-                        <div class="form-group">
-                            <label for="Destination">Destination</label>
-                            <input type="text" class="form-control" id="Destination">
-                        </div>
+                        <label for="Destination">Destination</label>
+                        <input type="text" class="form-control" id="Destination" maxlength=20 required />
                     </div>
                     <div class="form-group">
                         <label for="firstTrain">First Train Time (HH:mm - military time)</label>
-                        <input type="text" class="form-control" id="firstTrain">
+                        <input type="text" class="form-control" id="FirstTrain" placeholder="HH:MM" maxlength=4
+                            required />
                     </div>
                     <div class="form-group">
                         <div class="form-group">
                             <label for="frequency">Frequency (min.)</label>
-                            <input type="text" class="form-control" id="Frequency">
+                            <input type="number" class="form-control" id="Frequency" required />
                         </div>
-                        <button type="submit" class="btn color-peacock text-light">Add Train</button>
+                        <button type="submit" class="btn color-peacock text-light" id="AddTrain">Add Train</button>
                 </form>
             </div>
 
@@ -102,21 +106,8 @@
 
 
 
+    <script src="assets/javascript/script.js"></script>
 
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "USE YOUR OWN API KEY, THANK YOU",
-            authDomain: "service-storage-9ff7a.firebaseapp.com",
-            databaseURL: "https://service-storage-9ff7a.firebaseio.com",
-            projectId: "service-storage-9ff7a",
-            storageBucket: "service-storage-9ff7a.appspot.com",
-            messagingSenderId: "769919220049",
-            appId: "1:769919220049:web:e68a565de3e4de2d737b70"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
 
 </body>
 
