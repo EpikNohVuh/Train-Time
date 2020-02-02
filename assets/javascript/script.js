@@ -3,7 +3,7 @@ $(document).ready(function () {
     // Initialize FireBase
 
         var firebaseConfig = {
-            apiKey: "AIzaSyCH0X0cTK4760zN3NLTQ8Cq0fSNyyITpew",
+            apiKey: "",
             authDomain: "service-storage-9ff7a.firebaseapp.com",
             databaseURL: "https://service-storage-9ff7a.firebaseio.com",
             projectId: "service-storage-9ff7a",
