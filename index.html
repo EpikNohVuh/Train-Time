@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Train-Time</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css" class="css">
@@ -46,14 +46,14 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <td class="col-sm-2 font-weight-bold">Train #</td>
-                        <td class="col-sm-2 font-weight-bold">Destination</td>
-                        <td class="col-sm-2 font-weight-bold">Frequency (min)</td>
-                        <td class="col-sm-2 font-weight-bold">Next Arrival</td>
-                        <td class="col-sm-2 font-weight-bold">Minutes Away</td>
+                        <td class="font-weight-bold">Train Name</td>
+                        <td class="font-weight-bold">Destination</td>
+                        <td class="font-weight-bold">Frequency (min)</td>
+                        <td class="font-weight-bold">Next Arrival</td>
+                        <td class="font-weight-bold">Minutes Away</td>
                     </tr>
                 </thead>
-                <tbody class="tbodyTrain table-hover">
+                <tbody class="table-hover" id="tbodyTrain">
                     <!-- TRAIN ROUTE GETS APPENDED HERE -->
                 </tbody>
             </table>
@@ -77,7 +77,7 @@
                     </div>
                     <div class="form-group">
                         <label for="firstTrain">First Train Time (HH:mm - military time)</label>
-                        <input type="text" class="form-control" id="FirstTrain" placeholder="HH:MM" maxlength=4
+                        <input type="text" class="form-control" id="FirstTrain" placeholder="HH:MM" maxlength=5
                             required />
                     </div>
                     <div class="form-group">
@@ -107,6 +107,7 @@
 
 
     <script src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/config.js"></script>
 
 
 </body>
